@@ -15,8 +15,8 @@ function Home() {
     e.preventDefault();
    
     console.log(name, contact, email,questions, timeTaken);
-    const url ="http://localhost:8000/api/v1/quiz/createuser"
-    // const url="https://myweb-2t4i.onrender.com/api/v1/quiz/createuser"
+    // const url ="http://localhost:8000/api/v1/quiz/createuser"
+    const url="https://quizcontest.onrender.com/api/v1/quiz/createuser"
     try {
       //axios syantax
         await axios

@@ -14,8 +14,8 @@ function Result() {
   };
 
   // get all user Api call
-  const url = "http://localhost:8000/api/v1/quiz/getcurrentuser";
-  // const url = "https://myweb-2t4i.onrender.com/api/v1/quiz/getcurrentuser";
+  // const url = "http://localhost:8000/api/v1/quiz/getcurrentuser";
+  const url = "https://quizcontest.onrender.com/api/v1/quiz/getcurrentuser";
   useEffect(() => {
     axios.post(url, { email: userdata.email }).then((res) => {
       setSolutions(res.data.questions);

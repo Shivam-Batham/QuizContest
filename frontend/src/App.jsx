@@ -21,7 +21,7 @@ function App() {
 const [useranswers ,setUseranswers] = useState([null, null, null, null, null])
 
   // get all user Api call
-  const paperurl = "https://myweb-2t4i.onrender.com/api/v1/quiz/getalluser";
+  const paperurl = "https://quizcontest.onrender.com/api/v1/quiz/getalluser";
 
   useEffect(() => {
     axios
