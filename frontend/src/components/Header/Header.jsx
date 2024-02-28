@@ -24,7 +24,7 @@ function Header() {
       <nav className=" grid sm:grid-cols-2 grid-cols-6  gap-5 ">
         <div className="sm:col-span-1 col-span-3 ">
           <h1 className="text-4xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
-            {username}
+          Instant Quiz
           </h1>
         </div>
 
