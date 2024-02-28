@@ -1,0 +1,131 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+function Home() {
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [email, setEmail] = useState("");
+  const timeTaken = 4;
+  const questions= 1;
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+   
+    console.log(name, contact, email,questions, timeTaken);
+    const url ="http://localhost:8000/api/v1/quiz/createuser"
+    // const url="https://myweb-2t4i.onrender.com/api/v1/quiz/createuser"
+    try {
+      //axios syantax
+        await axios
+        .post(url, {
+          name,
+          contact,
+          email,
+          questions,
+          timeTaken
+        })
+        .then((res) => {
+          console.log("data send successfully", res.data);
+          localStorage.setItem('email', res.data.email);;
+         
+          navigate("/contest")
+        });
+    } catch (error) {
+      console.log("error during calling save api",error);
+    }
+  };
+
+  const inputcss =
+    "min-h-[60px] sm:min-w-[60%] min-w-[100%] border focus:outline-none focus:ring focus:ring-green-400 rounded-xl  text-black border-green-400 text-green-400 text-xl text-left mb-4 pl-2 ";
+
+  const onhover =
+    " m-5 p-3 text-4xl font-extrabold  text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500";
+
+  return (
+    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[380px]">
+      <h3 className=" text-6xl text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500 sm:mb-5 mt-0 mb-5 pt-32 ">
+        Welcome to the contest{" "}
+      </h3>
+
+      <div
+        onSubmit={handleSubmit}
+        className=" sm:min-w-[50%] min-w-[380px] sm:max-w-[40%]  max-w-[90%] m-[auto] p-10  bg-gray-950 rounded-xl border-gray-950   sm:text-center
+          shadow-xl shadow-neutral-700"
+      >
+        <div className="min-h-[100px] text-start mb-2 ">
+          <h3 className=" p-3 rounded-md border-emerald-400 text-6xl text-center    font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
+            {" "}
+            Register{" "}
+          </h3>
+        </div>
+
+        <div>
+          <label
+            className="mr-10 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500"
+            htmlFor="contact"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Write name..."
+            className={inputcss}
+          />
+        </div>
+
+        <div>
+          <label
+            className="mr-9 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500"
+            htmlFor="contact"
+          >
+            Phone
+          </label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+            placeholder="Write contact..."
+            className={inputcss}
+          />
+        </div>
+
+        <div>
+          <label
+            className="mr-12 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500"
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Write email..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={inputcss}
+          />
+        </div> 
+        <button
+        onClick={handleSubmit}
+          type="submit"
+          className="border sm:p-3 p-4 rounded-md  border-emerald-400 text-4xl text-center  sm:m-5 mt-3  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500"
+         
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
