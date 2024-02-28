@@ -2,36 +2,62 @@ import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 function Footer() {
- 
-
- 
   return (
-    <div className="w-screen bg-gray-950 text-white border-t-2 border-gray-400 font-sans  flex items-center justify-around flex-col pt-6 pb-2 ">
-      <div className="flex items-center justify-around w-screen pb-4">
-        <div>
-          <p className="text-xl font-bold">MyWeb Solution</p>
-          <p>Location</p>
-          <p>Email</p>
-          <p>Contact</p>
+    <footer className="sm:min-h-[300px] w-[780px]  sm:min-w-[100%] p-10 bg-slate-950 shadow-lg">
+      {/* container */}
+      <div className="grid sm:grid-cols-12 grid-cols-2  gap-2">
+        {/* company details */}
+
+        <div className=" sm:col-span-6 col-span-1  ">
+        
+          <p className="text-5xl sm:text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-sky-600">
+            Instant Quiz
+          </p>
+          <p className="text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+            shivambatham2610@gmail.com
+          </p>
+          <p className="text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+            +91 6390590908
+          </p>
+          <p className="text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+            Kanpur,Up
+          </p>
+          
         </div>
-        <div>
-          <p className="text-xl font-bold">Social Media</p>
-          <p>Linkedin</p>
-          <p>Github</p>
-          <p>Instagram</p>
+
+        {/* company socials */}
+        <div className="sm:col-span-6 col-span-1 ">
+          <h3 className="text-5xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-500">Social Media</h3>
+          <Link className="block text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500" to={"https://www.linkedin.com/in/shivam-batham/"}>
+            <span className=""> Linkedin  </span>
+          </Link>
+          <Link className="block text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500" to={"//github.com/Shivam-Batham"}>
+            <span className=""> Github </span>
+          </Link>
+          <Link className="block text-xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500" to={"https://twitter.com/Shivam63905"}>
+            <span className=""> X </span>
+          </Link>
         </div>
       </div>
-      <div>
-      <p className="flex">
-      © Copyright 2024. All Rights Reserved by 
-         <Link className="text-blue-500 " to="https://github.com/Shivam-Batham"><span>❤Shivam Batham</span> </Link> 
-         <Link className="text-blue-500 " to="https://github.com/Arman-ali1"><span>💙Arman Ali</span> </Link> 
-        
-      </p>
-        
-   
+
+      {/* credit */}
+      <div className="m-2   text-l text-center   font-bold  bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+
+       <div className=" m-3 min-h-[1px]  bg-gradient-to-r from-cyan-200 to-green-200" >
+       </div>
+        <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+          © Copyright 2024. All Rights Reserved by <br/>
+          <Link
+            className="text-blue-500 "
+            to="https://github.com/Shivam-Batham"
+          >❤<span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500"> Shivam Batham</span>{" "}
+          </Link>
+          <Link className="text-blue-500 " to="https://github.com/Arman-ali1">💙
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-green-500"> Arman Ali</span>{" "}
+          </Link>
+        </p>
       </div>
-    </div>
+    </footer>
   );
 }
 
