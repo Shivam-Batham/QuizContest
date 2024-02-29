@@ -1,47 +1,44 @@
-import { useState } from "react";
+
+// import Question from "./../Question/Question.jsx";
+import {  useEffect, useState } from "react";
 import axios from "axios";
 import Solutions from "./Solutions.jsx";
-import { useEffect } from "react";
+
 function Result() {
-  const [solutions, setSolutions] = useState([]);
-  const [score, setScore] = useState(0);
+  const[score,setScore]=useState(0)
+  const [quizdetails, setQuizdetails] = useState([]);
+  const url = "https://quizcontest.onrender.com/api/v1/quiz/getalluser";
   const userdata = {
-    name: "baby",
-    contact: "123443212",
-    email: "baby@gmail.com",
+    name: "shivam",
+    contact: "1233",
+    email: "shivam1234@gmail.com",
     questions: 1,
     timeTaken: 4,
   };
+  let myarr=[0,0,0,0,0]
+// get all user Api call 
+useEffect(()=>{
+  axios.get(url)
+  .then((res)=>{(setQuizdetails(res.data[0].questions))
+    console.log(res.data[0].questions[0].options[0].correctAns);
+    let scor=0;
+    for(let i=0;i<5;i++){
+      if(res.data[0].questions[i].userAns!=='not-marked'){
+        console.log("correctAns",res.data[0].questions[i].correctAns);
+        if(res.data[0].questions[i].userAns===res.data[0].questions[i].correctAns)
+        scor=scor+1;
+      }
+      setScore(scor)
+      // console.log(res.data[0].questions[i].userAns);
+      console.log(scor);
 
-  // get all user Api call
-  // const url = "http://localhost:8000/api/v1/quiz/getcurrentuser";
-  const url = "https://quizcontest.onrender.com/api/v1/quiz/getcurrentuser";
-  useEffect(() => {
-    axios.post(url, { email: userdata.email }).then((res) => {
-      setSolutions(res.data.questions);
-      console.log(res.data);
+    }
 
-     
-    });
-  }, [])
-  
+    console.log("scoreeeeeeeeeeeeeeeeeeeeeeeeeeee",score);
+    return 
+  })
 
-
-  useEffect(()=>{
-    solutions.map((ans, index) => {
-      let correctans = ans.options[0].correctAns;
-      // console.log(correctans);
-      let userans = ans.userAns;
-      // console.log(userans);
-  
-      correctans === userans
-        ? setScore((pre)=> (pre + 1)%5)
-        : null;
-      console.log(score);
-    })
-  },[score,setScore])
-    
-
+},[])
 
   return (
     <div className=" bg-slate-400  min-w-[100%]  pt-16 pb-5">
@@ -52,7 +49,7 @@ function Result() {
       </div>
       <div className="p-3  ">
         <h3 className="outline  text-4xl p-3 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-slate-800">
-          {/* {` Your Score : ${score} / 5`} */}
+          Your Score : {score} / 5
         </h3>
       </div>
 
@@ -65,16 +62,12 @@ function Result() {
         </div>
 
         {/* solutions */}
-        {solutions.map((paper, index) => (
-          <Solutions
-            key={index}
-            userAns={paper.userAns}
-            quesNumber={paper.question}
-            options={paper.options}
-            no={index}
-          />
-        ))}
+        {quizdetails.map((paper,index)=>(
+        <Solutions key={index} userAns=
+        {paper.userAns} quesNumber={paper.question} options={paper.correctAns} no={index} />
+       ))}
       </div>
+      
     </div>
   );
 }

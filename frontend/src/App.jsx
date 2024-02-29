@@ -20,7 +20,7 @@ function App() {
   const [opt3, setopt3] = useState([{}]);
   const [opt4, setopt4] = useState([{}]);
 
-  const email = "arman@gmail.com";
+  const email = "shivambatham2610@gmail.com";
   // get all user Api call 
   const url = "https://quizcontest.onrender.com/api/v1/quiz/getCurrentUser";
   const[userAns1,setUserAns1]=useState('a')
