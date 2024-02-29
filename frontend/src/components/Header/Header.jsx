@@ -20,17 +20,17 @@ function Header() {
     </div>
   );
   return (
-    <header className="fixedsm:min-h-[300px] w-[100%]  sm:min-w-[100%] p-2 bg-slate-950 shadow-lg">
+    <header className="fixed sm:min-h-[100px] w-[100%]  sm:min-w-[100%] p-2 bg-slate-950 shadow-lg ">
       <nav className=" grid sm:grid-cols-2 grid-cols-6  gap-5 ">
         <div className="sm:col-span-1 col-span-3 ">
-          <h1 className="text-4xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
+          <h1 className="p-2 text-4xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
           Instant Quiz
           </h1>
         </div>
 
         <div className="sm:col-span-1 text-end col-span-3">
           <h1 className=" text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
-           {(url.pathname =="/contest") || (url.pathname =="/contest/")?<Timer/>:""}
+           {/* {(url.pathname =="/contest") || (url.pathname =="/contest/")?<Timer/>:""} */}
            
            
           </h1>
