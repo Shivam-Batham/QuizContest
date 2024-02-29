@@ -125,7 +125,7 @@ const getCurrentUser = asyncHandler(async (req,res)=>{
     if (!user) {
         return res.status(404).json({ error: 'User not found' });
       }
-    // console.log("quesss",user.data[0].questions[4]);
+    // console.log("vvvvvvvvvvvvvvvvvvvvvvvv",user.data[0].questions[4]);
     //   console.log("user",user);
     return res
     .status(200)
@@ -137,7 +137,7 @@ const getAlluser = asyncHandler(async (req,res)=>{
     if (!users) {
         return res.status(404).json({ error: 'User not found' });
       }
-    //   console.log("quessss",users[0].questions);
+    //   console.log("vvvvvvvvvvvvvvvvvvvvvvvv",users[0].questions);
     let score=0
       for(let a=0;a<5;a++){
         console.log("cccccccccccccccccc",users[0].questions[a].userAns);
