@@ -52,33 +52,17 @@ function App() {
       });
   }, [setQuizdetails]);
 
-  //  console.log(...opt0)
-  //  const arr=[...opt0]
-  //  setopt0(...opt0)
-  console.log("opt arr1 :", opt0[0].option1);
-  console.log("opt arr1 :", opt0[0].option2);
-  console.log("opt arr1 :", opt0[0].option3);
-  //  console.log("opt arr1 :", arr[0])
-
-  // quizdetails.map((paper,index)=>{
-  //  setQues(paper.question);
-  //  setOpt(paper.options);
-  //  setNo(index)
-
-  //  console.log(ques)
-  //  console.log(opt)
-  //  console.log(no)
-  // })
+  
 
   const navigate = useNavigate();
   // const url = "https://quizcontest.onrender.com/api/v1/quiz/getalluser";
-  const userdata = {
-    name: "shivam",
-    contact: "1233",
-    email: "shivam1234@gmail.com",
-    questions: 1,
-    timeTaken: 4,
-  };
+  // const userdata = {
+  //   name: "shivam",
+  //   contact: "1233",
+  //   email: "shivam1234@gmail.com",
+  //   questions: 1,
+  //   timeTaken: 4,
+  // };
 
 
   const [checkmark1 ,setCheckmark1] = useState([0, 0, 0, 0, 0])
@@ -123,12 +107,8 @@ const submitionTime = "February 27, 2024 17:39:00";
     // const countdownDate=new Date((${submitionTime})).getTime()
     
 
-    // const UserStatus={
-    //   lgn:"Log Out"
-    // }
-    //   navigate('/UserData',{ state: { UserStatus } });
 
-    console.log(countdownDate);
+    // console.log(countdownDate);
     interval = setInterval(() => {
       const now = new Date().getTime();
 
@@ -161,7 +141,6 @@ const submitionTime = "February 27, 2024 17:39:00";
   useEffect(() => {
     startTimer();
     return () => clearInterval(interval.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   });
 
 
@@ -183,7 +162,7 @@ const submitionTime = "February 27, 2024 17:39:00";
       
       {/*=================================== */}
         <h3 className=" text-6xl text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500 sm:mb-5 mt-0 mb-5   ">
-          Welcome to the SpriteEra Quiz contest
+          Welcome to the Instant Quiz contest
         </h3>
         {/* ques 1===========================*/}
         <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
