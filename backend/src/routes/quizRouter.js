@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { createQuiz,createUser,getCurrentUser ,updateUserActivity,getAlluser,getallQuizs} from "../controller/quizControler.js";
-// import {verifyJWT} from "../middlewares/auth.middleware.js";
 
 const router = Router()
 
@@ -15,4 +14,3 @@ router.route("/getallquizs").get(getallQuizs);//admin only
 
 export default router;
 
-// https://myweb-2t4i.onrender.com/api/v1/quiz/getalluser
