@@ -20,7 +20,7 @@ function Header() {
     </div>
   );
   return (
-    <header className="fixed bg-slate-950 shadow-lg shadow-neutral-300  sm:min-h-[100px]  p-2  w-[100%]  ">
+    <header className="fixedsm:min-h-[300px] w-[100%]  sm:min-w-[100%] p-2 bg-slate-950 shadow-lg">
       <nav className=" grid sm:grid-cols-2 grid-cols-6  gap-5 ">
         <div className="sm:col-span-1 col-span-3 ">
           <h1 className="text-4xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">

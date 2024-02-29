@@ -3,7 +3,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <footer className="sm:min-h-[300px] w-[780px]  sm:min-w-[100%] p-10 bg-slate-950 shadow-lg">
+    <footer className="sm:min-h-[300px] w-[100%]  sm:min-w-[100%] p-10 bg-slate-950 shadow-lg">
       {/* container */}
       <div className="grid sm:grid-cols-12 grid-cols-2  gap-2">
         {/* company details */}
