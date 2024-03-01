@@ -140,18 +140,18 @@ const submitionTime = "February 27, 2024 17:39:00";
 */}
 
   return (
-    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[360px]">
+    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 minw-[360px]">
       
-      <div className="pt-32 grid sm:grid-cols-1  bg-slate-400">
+      <div className=" grid sm:grid-cols-1   bg-slate-400">
      
-        <h3 className=" text-6xl text-center sm:mb-5 mt-0 mb-5 pt-32 font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500   ">
+        <h3 className=" sm:text-6xl text-3xl text-center sm:mb-5 mt-0 mb-5 sm:pt-32 pt-24   font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500   ">
           Welcome to the Instant Quiz contest
         </h3>
         {/* ques 1===========================*/}
-        <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+        <div className=" sm:w-[70%]  w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
           <div className="min-h-[50px] text-start  ">
             <h3>
-              <span>{1}. </span> {ques0}{" "}
+              <span>{1}. </span> {ques0}{" ?"}
             </h3>
           </div>
 
@@ -223,10 +223,10 @@ const submitionTime = "February 27, 2024 17:39:00";
 
         </div>
         {/* Q2 ==============================*/}
-        <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+        <div className=" sm:w-[70%]  w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
           <div className="min-h-[50px] text-start  ">
             <h3>
-              <span>{2}. </span> {ques1}{" "}
+              <span>{2}. </span> {ques1}{" ?"}
             </h3>
           </div>
 
@@ -299,10 +299,10 @@ const submitionTime = "February 27, 2024 17:39:00";
         </div>
 
         {/* Q3  */}
-        <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+        <div className=" sm:w-[70%]  w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
           <div className="min-h-[50px] text-start  ">
             <h3>
-              <span>{3}. </span> {ques2}{" "}
+              <span>{3}. </span> {ques2}{" ?"}
             </h3>
           </div>
 
@@ -375,10 +375,10 @@ const submitionTime = "February 27, 2024 17:39:00";
         </div>
 
         {/* Q4  */}
-        <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+        <div className=" sm:w-[70%]  w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
           <div className="min-h-[50px] text-start  ">
             <h3>
-              <span>{4}. </span> {ques3}{" "}
+              <span>{4}. </span> {ques3}{" ?"}
             </h3>
           </div>
 
@@ -450,10 +450,10 @@ const submitionTime = "February 27, 2024 17:39:00";
 
         </div>
         {/* Q5  */}
-        <div className=" sm:w-[60%]  max-w-[95%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+        <div className=" sm:w-[70%]  w-[95%]  m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
           <div className="min-h-[50px] text-start  ">
             <h3>
-              <span>{5}. </span> {ques4}{" "}
+              <span>{5}. </span> {ques4}{" ?"}
             </h3>
           </div>
 

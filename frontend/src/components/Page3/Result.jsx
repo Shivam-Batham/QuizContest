@@ -53,9 +53,9 @@ useEffect(()=>{
         </h3>
       </div>
 
-      <div className=" sm:min-w-[50%] sm:max-w-[40%]  max-w-[90%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-center mb-5 shadow-xl shadow-neutral-700">
+      <div className=" sm:min-w-[50%] sm:max-w-[40%]  max-w-[90%] m-[auto] p-4 bg-gray-950 rounded-xl border-gray-950 mt-0  text-center mb-5 shadow-xl shadow-neutral-700">
         <div className="min-h-[100px] text-start mb-2 ">
-          <h3 className=" p-3 rounded-md border-emerald-400 text-6xl text-center  m-5  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
+          <h3 className=" rounded-md border-emerald-400 text-6xl text-center    font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
             {" "}
             Solutions{" "}
           </h3>

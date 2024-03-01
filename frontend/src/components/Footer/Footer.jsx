@@ -57,8 +57,9 @@ function Footer() {
       </div>
 
       {/* credit */}
-      <div className="m-2   text-l text-center   font-bold  bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
+      <div className="mb-0 text-l text-center   font-bold  bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
         <div className=" m-3 min-h-[1px]  bg-gradient-to-r from-cyan-200 to-green-200"></div>
+
         <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
           © Copyright 2024. All Rights Reserved by <br />
           <Link
