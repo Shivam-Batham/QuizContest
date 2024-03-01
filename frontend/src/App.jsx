@@ -77,70 +77,8 @@ function App() {
   
   };
 
-  {/*
-// ==========================timer
-
-const submitionTime = "February 27, 2024 17:39:00";
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("0");
-  const [timerSeconds, setTimerSeconds] = useState("0");
-  const [countdownDate, setCountdownDate] = useState(
-    new Date().getTime() + 301000
-  );
-
-  // const navigate = useNavigate();
-
-  let interval = useRef();
-
-  // const startTime='February 27, 2024 15:26:00'
-  const startTimer = () => {
-    // const countdownDate=new Date((${submitionTime})).getTime()
-    
-
-
-    // console.log(countdownDate);
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        //stop timer
-        clearInterval(interval.current);
-      } else {
-        //update timer
-        // setTimerDays(days)
-        // setTimerHours(hours)
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-        if(seconds===0 && minutes===0 ){
-          handleSubmitpaper();
-        }
-        // countdownDate=countdownDate+1000
-      }
-    }, 1000);
-  };
-
-  useEffect(() => {
-    startTimer();
-    return () => clearInterval(interval.current);
-  });
-
-
-//=======================================timer
-
-*/}
-
   return (
-    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 minw-[360px]">
+    <div className="transition ease-in-out delay-100 bg-slate-400 sm:pt-5 pb-5 sm:pb-10 minw-[360px]">
       
       <div className=" grid sm:grid-cols-1   bg-slate-400">
      

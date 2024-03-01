@@ -4,7 +4,7 @@ import check from "./../../assets/check.svg"
 function Solutions({ userAns,quesNumber, no, correctans }) {
   return (
     <>
-     <div className=" sm:min-w-[80%]  min-w-[100%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
+     <div className="transition ease-in-out delay-100 sm:min-w-[80%]  min-w-[100%] m-[auto] p-10 bg-gray-950 rounded-xl border-gray-950 mt-0  text-start mb-5 shadow-xl shadow-neutral-700">
         <div className="min-h-[50px] text-start  ">
           <h3>
             <span>{no + 1}. </span> {quesNumber}{" ?"}

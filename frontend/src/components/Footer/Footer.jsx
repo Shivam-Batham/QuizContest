@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <footer className="break-words sm:min-h-[300px] w-[360px]  sm:min-w-[100%] sm:p-10  bg-slate-950 shadow-lg">
+    <footer className="transition ease-in-out delay-100 break-words sm:min-h-[300px] w-[360px]  sm:min-w-[100%] sm:p-10  bg-slate-950 shadow-lg">
       {/* container */}
       <div className="grid sm:grid-cols-12 grid-cols-2 sm:gap-2 gap-4 p-2 ">
         {/* company details */}
