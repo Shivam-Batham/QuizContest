@@ -143,17 +143,8 @@ const submitionTime = "February 27, 2024 17:39:00";
     <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[360px]">
       
       <div className="pt-32 grid sm:grid-cols-1  bg-slate-400">
-      {/* =================================timer*/}
-      
-      <div className="   text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
-    
-      {/* <h1 className="text-right text-green-700 ">{timerMinutes<10?"0"+timerMinutes:timerMinutes}:{timerSeconds<10?"0"+timerSeconds:timerSeconds} min Left</h1> */}
-   
-      {/* <button onClick={submit} className='bg-red-500 text-white p-2 rounded-xl'>Stop</button> */}
-     </div>
-      
-      {/*=================================== */}
-        <h3 className=" text-6xl text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500 sm:mb-5 mt-0 mb-5   ">
+     
+        <h3 className=" text-6xl text-center sm:mb-5 mt-0 mb-5 pt-32 font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500   ">
           Welcome to the Instant Quiz contest
         </h3>
         {/* ques 1===========================*/}
