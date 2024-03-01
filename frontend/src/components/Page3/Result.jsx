@@ -38,17 +38,17 @@ useEffect(()=>{
     // return 
   })
 
-},[])
+},[score])
 
   return (
     <div className="transition ease-in-out delay-100 bg-slate-400  sm:min-w-[100%] min-w-[360px]  pt-16 pb-5">
-      <div className="p-5 ">
-        <h3 className="text-6xl pr-1 pl-1 sm:mb-5 sm:pt-32  text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500">
+      <div className="pt-5 ">
+        <h3 className="sm:text-6xl text-4xl pl-[6px] pr-[6px] sm:mb-5 mb-0 sm:pt-32  text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500">
           Congratulations for Submisson
         </h3>
       </div>
       <div className="p-3  ">
-        <h3 className="text-4xl p-3 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-green-500">
+        <h3 className="text-4xl p-3 pt-0 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-green-500">
           Your Score : <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-500">{score ?score : "wait..." }</span> / <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">{5}</span>
         </h3>
       </div>
