@@ -41,7 +41,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className=" bg-slate-400  min-w-[100%]  pt-16 pb-5">
+    <div className=" bg-slate-400  sm:min-w-[100%] min-w-[360px]  pt-16 pb-5">
       <div className="p-5 ">
         <h3 className=" mt-10 text-6xl p-3 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500">
           Congratulations for Submisson

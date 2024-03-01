@@ -18,7 +18,7 @@ function Solutions({ userAns,quesNumber, no, correctans }) {
             <p htmlFor="option1" className="col-span-11">
              Your Answer :   {userAns } {userAns == correctans ?  <span className="  pt-[1px] pb-[1px] pl-[5px] pr-[5px]  m-1 border-red-500 rounded-md text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">correct</span>
               : 
-             <span className="  pt-[1px] pb-[1px] pl-[5px] pr-[5px]  m-1 border-red-500 rounded-md text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500">wrong</span>} 
+             <h1 className="drop-shadow lg:drop-shadow-lg  shadow-red-200  pt-[1px] pb-[1px] pl-[5px] pr-[5px]  m-1  rounded-md text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500">wrong</h1>} 
             </p>
           </div>
           <div className="grid grid-cols-12 mb-5 ">

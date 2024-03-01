@@ -140,7 +140,7 @@ const submitionTime = "February 27, 2024 17:39:00";
 */}
 
   return (
-    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[380px]">
+    <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[360px]">
       
       <div className="pt-32 grid sm:grid-cols-1  bg-slate-400">
       {/* =================================timer*/}
