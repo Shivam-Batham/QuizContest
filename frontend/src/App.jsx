@@ -78,7 +78,7 @@ function App() {
   };
 
   return (
-    <div className="transition ease-in-out delay-100 bg-slate-400 sm:pt-5 pb-5 sm:pb-10 minw-[360px]">
+    <div className="transition ease-in-out delay-100 bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[360px]">
       
       <div className=" grid sm:grid-cols-1   bg-slate-400">
      
