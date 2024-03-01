@@ -55,7 +55,6 @@ const createUser = asyncHandler(async (req,res)=>{
         if(!quizQuestion){
             return res.status(400).json({ message: 'Question not found' });
         }
-        // console.log(quizQuestion.questions[0].question);
         try{
         
             const newUser = new User({
@@ -67,10 +66,8 @@ const createUser = asyncHandler(async (req,res)=>{
             })
             const savedUser = await newUser.save();
           
-            console.log("User created");
             res.status(201).json(savedUser);
         }catch(err){
-            console.log(err);
             res.status(500).json({error: err.message})
         }
 })
@@ -79,29 +76,24 @@ const createUser = asyncHandler(async (req,res)=>{
 const updateUserActivity = asyncHandler(async (req,res)=>{
     const {email,userAnswers} = req.body
     const numberOfProducts = Object.keys(userAnswers).length
-    // console.log(numberOfProducts,email);
     if(numberOfProducts!==5){
         return res.status(400).json({ message: 'Invalid Activity provite all entity' });
     }
    
 
     try {
-      // Update the document based on the email
       let user = await User.findOne({ email });
 
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
     
-    // console.log("userQuesFind",user.questions);
     
         for(let i=0;i<5;i++){
             user.questions[i].userAns=userAnswers[i]
         }
-    //   console.log(user.questions);
 
       user.questions.forEach(element => {
-        // console.log(element.userAns);
       });
     const result=await User.updateOne(
         { _id: user._id },
@@ -120,13 +112,10 @@ const updateUserActivity = asyncHandler(async (req,res)=>{
 //============================get current user===================
 const getCurrentUser = asyncHandler(async (req,res)=>{
     const {email} = req.body;
-    console.log(email);
     const user = await User.findOne({ email })
     if (!user) {
         return res.status(404).json({ error: 'User not found' });
       }
-    // console.log("vvvvvvvvvvvvvvvvvvvvvvvv",user.data[0].questions[4]);
-    //   console.log("user",user);
     return res
     .status(200)
     .json(user)
@@ -137,7 +126,6 @@ const getAlluser = asyncHandler(async (req,res)=>{
     if (!users) {
         return res.status(404).json({ error: 'User not found' });
       }
-    //   console.log("vvvvvvvvvvvvvvvvvvvvvvvv",users[0].questions);
     let score=0
       for(let a=0;a<5;a++){
         console.log("cccccccccccccccccc",users[0].questions[a].userAns);
@@ -145,8 +133,7 @@ const getAlluser = asyncHandler(async (req,res)=>{
             score=score+1
         }
       }
-    //   users[0].scr=score
-    //   console.log("users score",users[0].scr);
+ 
     return res
     .status(200)
     .json(users)

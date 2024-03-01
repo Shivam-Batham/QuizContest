@@ -32,12 +32,9 @@ function App() {
     axios
       .post((url), {email})
       .then((res) => {
-        // console.log("0000000000000000000000000000000000000",res.data.questions[0]);
-        // setQuizdetails(res.data[0].questions);
         return res.data;
       })
       .then((res) => {
-        // console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",res.questions[0].question);
         setQues0(res.questions[0].question);
         setQues1(res.questions[1].question);
         setQues2(res.questions[2].question);
@@ -55,14 +52,7 @@ function App() {
   
 
   const navigate = useNavigate();
-  // const url = "https://quizcontest.onrender.com/api/v1/quiz/getalluser";
-  // const userdata = {
-  //   name: "shivam",
-  //   contact: "1233",
-  //   email: "shivam1234@gmail.com",
-  //   questions: 1,
-  //   timeTaken: 4,
-  // };
+ 
 
 
   const [checkmark1 ,setCheckmark1] = useState([0, 0, 0, 0, 0])
@@ -87,6 +77,7 @@ function App() {
   
   };
 
+  {/*
 // ==========================timer
 
 const submitionTime = "February 27, 2024 17:39:00";
@@ -146,6 +137,7 @@ const submitionTime = "February 27, 2024 17:39:00";
 
 //=======================================timer
 
+*/}
 
   return (
     <div className=" bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[380px]">
@@ -155,7 +147,7 @@ const submitionTime = "February 27, 2024 17:39:00";
       
       <div className="   text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500">
     
-      <h1 className="text-right text-green-700 ">{timerMinutes<10?"0"+timerMinutes:timerMinutes}:{timerSeconds<10?"0"+timerSeconds:timerSeconds} min Left</h1>
+      {/* <h1 className="text-right text-green-700 ">{timerMinutes<10?"0"+timerMinutes:timerMinutes}:{timerSeconds<10?"0"+timerSeconds:timerSeconds} min Left</h1> */}
    
       {/* <button onClick={submit} className='bg-red-500 text-white p-2 rounded-xl'>Stop</button> */}
      </div>
