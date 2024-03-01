@@ -81,7 +81,7 @@ const submitionTime = "February 27, 2024 17:39:00";
 //=======================================timer
 
   return (
-    <header className="fixed sm:min-h-[100px] w-[360px] break-words sm:min-w-[100%] p-2 bg-slate-950 shadow-lg ">
+    <header className="fixed sm:min-h-[100px] w-[360px] break-words sm:min-w-[100%] p-2 bg-slate-950 shadow-neutral-200 ">
       <nav className=" grid sm:grid-cols-2 grid-cols-6  gap-5 ">
         <div className="sm:col-span-1 col-span-3 ">
           <h1 className="p-2 sm:text-5xl text-4xl text-start   font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-sky-500">
