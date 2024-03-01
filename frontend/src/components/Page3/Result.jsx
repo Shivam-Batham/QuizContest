@@ -34,8 +34,8 @@ useEffect(()=>{
 
     }
 
-    console.log("scoreeeeeeeeeeeeeeeeeeeeeeeeeeee",score);
-    return 
+    // console.log("scoreeeeeeeeeeeeeeeeeeeeeeeeeeee",score);
+    // return 
   })
 
 },[])
@@ -43,7 +43,7 @@ useEffect(()=>{
   return (
     <div className="transition ease-in-out delay-100 bg-slate-400  sm:min-w-[100%] min-w-[360px]  pt-16 pb-5">
       <div className="p-5 ">
-        <h3 className=" mt-10 text-6xl p-3 sm:mb-5  mb-5 pt-32 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500">
+        <h3 className="text-6xl pr-1 pl-1 sm:mb-5 sm:pt-32  text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500">
           Congratulations for Submisson
         </h3>
       </div>

@@ -41,12 +41,11 @@ function Home() {
   const inputcss =
     "min-h-[60px] sm:min-w-[60%] min-w-[100%] border focus:outline-none focus:ring focus:ring-green-400 rounded-xl  text-black border-green-400 text-green-400 text-xl text-left mb-4 pl-2 ";
 
-  const onhover =
-    " m-5 p-3 text-4xl font-extrabold  text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-500";
+
 
   return (
     <div className="transition ease-in-out delay-100 bg-slate-400 sm:pt-5 pb-5 sm:pb-10 min-w-[360px]">
-      <h3 className=" text-6xl text-center sm:mb-5 mt-0 mb-5 pt-32 font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500  ">
+      <h3 className=" sm:text-6xl text-3xl text-center sm:mb-5 mt-0 mb-5 pt-24 font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-white to-green-500  ">
         Welcome to the contest{" "}
       </h3>
 
