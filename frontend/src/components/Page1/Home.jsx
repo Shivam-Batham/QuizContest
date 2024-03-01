@@ -12,7 +12,7 @@ function Home() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
    
     console.log(name, contact, email,questions, timeTaken);
     // const url ="http://localhost:8000/api/v1/quiz/createuser"
