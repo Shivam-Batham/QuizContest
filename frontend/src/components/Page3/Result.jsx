@@ -48,8 +48,8 @@ useEffect(()=>{
         </h3>
       </div>
       <div className="p-3  ">
-        <h3 className="outline  text-4xl p-3 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-slate-800">
-          Your Score : {score} / 5
+        <h3 className="text-4xl p-3 text-center  font-extrabold  text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-green-500">
+          Your Score : <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-500">{score ?score : "wait..." }</span> / <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">{5}</span>
         </h3>
       </div>
 
@@ -64,7 +64,7 @@ useEffect(()=>{
         {/* solutions */}
         {quizdetails.map((paper,index)=>(
         <Solutions key={index} userAns=
-        {paper.userAns} quesNumber={paper.question} options={paper.correctAns} no={index} />
+        {paper.userAns} quesNumber={paper.question} correctans={paper.correctAns} no={index} />
        ))}
       </div>
       
